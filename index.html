@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carolina Bernal Marchena — Portfolio</title>
+  <meta name="description" content="Portfolio de Carolina Bernal Marchena, estudiante de Ingeniería Informática. Proyectos, habilidades y un poco de todo lo demás." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/typography.css" />
+  <link rel="stylesheet" href="css/tabs.css" />
+  <link rel="stylesheet" href="css/desk.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <nav class="tabs" aria-label="Navegación principal">
+    <a class="tabs__link" href="#about">sobre mí</a>
+    <a class="tabs__link" href="#projects">proyectos</a>
+    <a class="tabs__link" href="#skills">habilidades</a>
+    <a class="tabs__link" href="#contact">contacto</a>
+  </nav>
+
+  <!-- ============ HERO: EL ESCRITORIO ============ -->
+  <header class="desk" id="top">
+    <img class="desk__doodle desk__doodle--1" src="assets/svg/doodle-sparkle.svg" alt="" aria-hidden="true" />
+    <img class="desk__doodle desk__doodle--2" src="assets/svg/doodle-heart.svg" alt="" aria-hidden="true" />
+    <img class="desk__doodle desk__doodle--3" src="assets/svg/doodle-star.svg" alt="" aria-hidden="true" />
+
+    <div class="desk__intro">
+      <span class="desk__eyebrow">hola, soy</span>
+      <h1 class="desk__title">Carolina Bernal<br />Marchena</h1>
+      <p class="desk__subtitle">
+        Estudiante de Ingeniería Informática en la Universidad de Sevilla.
+        Este es mi escritorio digital — un poco de código, un poco de scrapbook.
+      </p>
+      <span class="desk__hint">
+        <img src="assets/svg/arrow-scribble.svg" alt="" aria-hidden="true" />
+        arrastra las notas, o haz clic para ir a la sección
+      </span>
+    </div>
+
+    <div class="desk__board">
+      <button type="button" class="note note--about" data-target="#about">
+        <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
+        <span class="note__label">sobre mí</span>
+        <span class="note__sub">quién soy</span>
+      </button>
+
+      <button type="button" class="note note--projects" data-target="#projects">
+        <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
+        <span class="note__label">proyectos</span>
+        <span class="note__sub">lo que he hecho</span>
+      </button>
+
+      <button type="button" class="note note--skills" data-target="#skills">
+        <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
+        <span class="note__label">habilidades</span>
+        <span class="note__sub">con qué trabajo</span>
+      </button>
+
+      <button type="button" class="note note--contact" data-target="#contact">
+        <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
+        <span class="note__label">contacto</span>
+        <span class="note__sub">hablemos</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ SOBRE MÍ ============ -->
+  <section class="about" id="about">
+    <div class="about__wrap">
+      <div class="about__frame">
+        <span class="about__tape" aria-hidden="true"></span>
+        <img src="assets/svg/about-desk.svg" alt="Ilustración de un escritorio con un portátil, una Nintendo DS, una taza de té y cinta washi" />
+        <span class="about__caption">mi rincón de siempre</span>
+      </div>
+
+      <div class="about__body">
+        <span class="eyebrow">sobre mí</span>
+        <h2>Código con alma de scrapbook</h2>
+        <p>
+          Soy Carolina, estudiante de Ingeniería Informática (mención en Tecnologías
+          de la Información) en la Universidad de Sevilla. Ahora mismo estoy
+          terminando mi TFG: una plataforma de coleccionables digitales gamificada.
+        </p>
+        <p>
+          Cuando no estoy programando, seguramente ande dibujando pixel art, haciendo
+          papercraft — mis flexágonos son mi debilidad — o decorando mi escritorio
+          con toda la estética pastel que encuentro. También le doy vueltas, muy
+          despacito, a un jueguito homebrew para Nintendo DS sobre decorar la jaula
+          de un pájaro.
+        </p>
+        <p>
+          Creo que la tecnología también puede ser bonita y hecha con cariño, así
+          que este portfolio es un poco eso: mis proyectos, pero con el formato de
+          un diario.
+        </p>
+        <p class="about__signature">— Carolina</p>
+        <div class="about__tags">
+          <span class="about__tag">Sevilla, España</span>
+          <span class="about__tag">pixel art</span>
+          <span class="about__tag">papercraft</span>
+          <span class="about__tag">homebrew DS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROYECTOS ============ -->
+  <section class="projects" id="projects">
+    <div class="projects__header">
+      <span class="eyebrow">proyectos</span>
+      <h2>Algunas cosas que he construido</h2>
+      <p class="section-intro">
+        Una selección de proyectos de mi GitHub, de la universidad y de ratos libres.
+        Cada uno tiene su propia historia.
+      </p>
+    </div>
+
+    <div class="projects__grid">
+
+      <!-- TrinketBox / TFG -->
+      <article class="project-card project-card--trinketbox">
+        <span class="project-card__tape" aria-hidden="true"></span>
+        <img class="project-card__icon" src="assets/svg/icon-trinketbox.svg" alt="" aria-hidden="true" />
+        <h3 class="project-card__title">TrinketBox</h3>
+        <p class="project-card__desc">
+          Mi Trabajo de Fin de Grado: una plataforma de coleccionables digitales
+          gamificada, con intercambios, logros y estadísticas. Refactoricé todo el
+          backend a una arquitectura MVC limpia y le di a cada pantalla un sistema
+          de variables CSS pastel consistente.
+        </p>
+        <div class="project-card__tags">
+          <span class="project-card__tag">Angular</span>
+          <span class="project-card__tag">Node.js</span>
+          <span class="project-card__tag">Sequelize</span>
+          <span class="project-card__tag">SQLite</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/CarolinaBernalMarchena/Carolina_Bernal_Marchena_TFG" target="_blank" rel="noopener">
+          ver en GitHub
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <!-- Birdex -->
+      <article class="project-card project-card--birdex">
+        <span class="project-card__tape" aria-hidden="true"></span>
+        <img class="project-card__icon" src="assets/svg/icon-birdex.svg" alt="" aria-hidden="true" />
+        <h3 class="project-card__title">Birdex</h3>
+        <p class="project-card__desc">
+          Un cuaderno de campo ornitológico en formato app: guarda las aves que has
+          visto, añade notas personales sobre cada una y consulta un mapa con los
+          mejores sitios para observarlas.
+        </p>
+        <div class="project-card__tags">
+          <span class="project-card__tag">Java</span>
+          <span class="project-card__tag">Android Studio</span>
+          <span class="project-card__tag">Firebase</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/CarolinaBernalMarchena/Birdex" target="_blank" rel="noopener">
+          ver en GitHub
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <!-- territorio_silvestre -->
+      <article class="project-card project-card--wild">
+        <span class="project-card__tape" aria-hidden="true"></span>
+        <img class="project-card__icon" src="assets/svg/icon-wild.svg" alt="" aria-hidden="true" />
+        <h3 class="project-card__title">Territorio Silvestre</h3>
+        <p class="project-card__desc">
+          Una web que unifica información sobre la biodiversidad amenazada de
+          España: especies en peligro, espacios protegidos de Andalucía y
+          avistamientos recientes en Sevilla, recopilados mediante web scraping.
+        </p>
+        <div class="project-card__tags">
+          <span class="project-card__tag">Python</span>
+          <span class="project-card__tag">Django</span>
+          <span class="project-card__tag">BeautifulSoup</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/CarolinaBernalMarchena/territorio_silvestre" target="_blank" rel="noopener">
+          ver en GitHub
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+      <!-- ProfessionalOrganisations_Stats -->
+      <article class="project-card project-card--stats">
+        <span class="project-card__tape" aria-hidden="true"></span>
+        <img class="project-card__icon" src="assets/svg/icon-stats.svg" alt="" aria-hidden="true" />
+        <h3 class="project-card__title">Colegios Profesionales</h3>
+        <p class="project-card__desc">
+          Visualización de datos de los colegios profesionales de Andalucía, con
+          gráficas propias e integraciones con APIs externas para comparar la
+          información con otras fuentes.
+        </p>
+        <div class="project-card__tags">
+          <span class="project-card__tag">Node.js</span>
+          <span class="project-card__tag">Svelte</span>
+          <span class="project-card__tag">TypeScript</span>
+        </div>
+        <a class="project-card__link" href="https://github.com/CarolinaBernalMarchena/ProfessionalOrganisations_Stats" target="_blank" rel="noopener">
+          ver en GitHub
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ HABILIDADES ============ -->
+  <section class="skills" id="skills">
+    <div class="skills__wrap">
+      <span class="eyebrow">habilidades</span>
+      <h2>Con qué trabajo</h2>
+
+      <div class="skills__groups">
+        <div class="skills__group">
+          <h3>Lenguajes</h3>
+          <div class="skills__chips">
+            <span class="chip chip--pink">JavaScript</span>
+            <span class="chip chip--lilac">TypeScript</span>
+            <span class="chip chip--mint">Java</span>
+            <span class="chip chip--cream">Python</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Frontend &amp; frameworks</h3>
+          <div class="skills__chips">
+            <span class="chip chip--lilac">Angular</span>
+            <span class="chip chip--pink">Ionic</span>
+            <span class="chip chip--cream">HTML</span>
+            <span class="chip chip--mint">CSS</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Backend &amp; datos</h3>
+          <div class="skills__chips">
+            <span class="chip chip--mint">Node.js</span>
+            <span class="chip chip--pink">SQL</span>
+            <span class="chip chip--lilac">NoSQL</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Herramientas</h3>
+          <div class="skills__chips">
+            <span class="chip chip--cream">Docker</span>
+            <span class="chip chip--lilac">Kubernetes</span>
+            <span class="chip chip--pink">Android Studio</span>
+            <span class="chip chip--mint">WordPress</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Idiomas</h3>
+          <div class="skills__chips">
+            <span class="chip chip--pink">Español (nativo)</span>
+            <span class="chip chip--lilac">Inglés (C1)</span>
+          </div>
+        </div>
+
+        <div class="skills__group">
+          <h3>Y por diversión</h3>
+          <div class="skills__chips">
+            <span class="chip chip--cream">pixel art</span>
+            <span class="chip chip--mint">papercraft</span>
+            <span class="chip chip--pink">devkitPro / Nintendo DS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="contact" id="contact">
+    <div class="contact__card">
+      <span class="eyebrow">contacto</span>
+      <h2>¿Hablamos?</h2>
+      <p>
+        Si quieres ver más proyectos, revisar el código o simplemente saludar,
+        aquí me encuentras.
+      </p>
+      <a class="contact__button" href="https://github.com/CarolinaBernalMarchena" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
+        Ver mi GitHub
+      </a>
+      <p class="footer-note">gracias por pasarte por aquí ✦</p>
+    </div>
+  </section>
+
+  <script src="js/draggable.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

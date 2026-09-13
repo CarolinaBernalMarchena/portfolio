@@ -1,0 +1,47 @@
+/* ============================================
+   PESTAÑAS DE NAVEGACIÓN
+   Una fila fija de "pestañas" tipo separador de
+   libreta, discretas, para navegar sin arrastrar.
+   ============================================ */
+
+.tabs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  pointer-events: none;
+}
+
+.tabs__link {
+  pointer-events: auto;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--ink-on-pink);
+  background: var(--bg-card);
+  padding: 0.3rem 0.9rem 0.4rem;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 3px 8px rgba(138, 63, 99, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.tabs__link:hover {
+  transform: translateY(2px);
+}
+
+@media (max-width: 640px) {
+  .tabs {
+    gap: 0.25rem;
+    padding: 0.4rem 0.5rem;
+    flex-wrap: wrap;
+  }
+  .tabs__link {
+    font-size: 1rem;
+    padding: 0.25rem 0.6rem 0.3rem;
+  }
+}

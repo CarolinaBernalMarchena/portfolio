@@ -1,0 +1,82 @@
+/* ============================================
+   SOBRE MÍ
+   Maquetación tipo página de diario: una "polaroid"
+   ilustrada del escritorio + texto manuscrito.
+   ============================================ */
+
+.about {
+  background: var(--bg-paper);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.about__wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.about__frame {
+  position: relative;
+  background: var(--bg-card);
+  padding: 1rem 1rem 2.2rem;
+  border-radius: 2px;
+  box-shadow: var(--shadow-card);
+  transform: rotate(-3deg);
+}
+
+.about__frame img {
+  border-radius: 1px;
+}
+
+.about__caption {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-hand);
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+}
+
+.about__tape {
+  position: absolute;
+  width: 70px;
+  height: 26px;
+  background: var(--mint);
+  opacity: 0.75;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.about__body p {
+  font-size: 1.12rem;
+}
+
+.about__signature {
+  margin-top: var(--space-sm);
+  font-family: var(--font-hand);
+  font-size: 1.8rem;
+  color: var(--pink-deep);
+}
+
+.about__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-sm);
+}
+
+.about__tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background: var(--bg-paper-alt);
+  color: var(--pink-ink);
+}

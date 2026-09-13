@@ -1,0 +1,72 @@
+/* ============================================
+   CONTACTO / PIE
+   Una "postal" de despedida con el enlace a GitHub.
+   ============================================ */
+
+.contact {
+  background: linear-gradient(160deg, var(--bg-paper-alt) 0%, var(--bg-desk) 100%);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+.contact__card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: var(--space-lg) var(--space-md);
+  box-shadow: var(--shadow-card);
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.contact__card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 2px dashed var(--pink);
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.contact h2 {
+  margin-bottom: 0.6rem;
+}
+
+.contact p {
+  margin: 0 auto 1.6rem;
+  color: var(--ink-soft);
+}
+
+.contact__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--pink-deep);
+  color: #fff8fb;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: var(--shadow-note);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contact__button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.contact__button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-note {
+  margin-top: var(--space-md);
+  font-family: var(--font-hand);
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}

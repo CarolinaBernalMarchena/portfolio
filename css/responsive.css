@@ -1,0 +1,55 @@
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 860px) {
+  .about__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .about__frame {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__groups {
+    grid-template-columns: 1fr;
+  }
+
+  .skills__group:nth-child(2),
+  .skills__group:nth-child(3) {
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .desk {
+    padding: var(--space-md) var(--space-sm) var(--space-lg);
+  }
+
+  .desk__board {
+    min-height: 620px;
+  }
+
+  /* En pantallas pequeñas apilamos las notas en vez de
+     posicionarlas absolutamente sobre un tablero ancho */
+  .note {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 78%;
+    margin: 0 auto var(--space-sm);
+  }
+
+  .desk__doodle {
+    display: none;
+  }
+
+  .contact__card {
+    padding: var(--space-md) var(--space-sm);
+  }
+}

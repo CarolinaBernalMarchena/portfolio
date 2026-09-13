@@ -1,0 +1,38 @@
+<svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+  <rect width="260" height="260" fill="#fbeaf2"/>
+  <!-- laptop -->
+  <rect x="55" y="120" width="110" height="70" rx="6" fill="#f2a9c6" stroke="#4a3247" stroke-width="2"/>
+  <rect x="63" y="128" width="94" height="50" rx="3" fill="#fffdfa"/>
+  <path d="M55 190 L165 190 L178 202 L42 202 Z" fill="#dd5d94" stroke="#4a3247" stroke-width="2"/>
+  <path d="M95 145 L108 158 L128 138" fill="none" stroke="#dd5d94" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- pixel heart on screen -->
+  <g transform="translate(85,150)">
+    <rect x="0" y="0" width="4" height="4" fill="#dd5d94"/>
+  </g>
+  <!-- Nintendo DS -->
+  <g transform="translate(150,60) rotate(-8)">
+    <rect x="0" y="0" width="46" height="70" rx="6" fill="#c7addb" stroke="#4a3247" stroke-width="2"/>
+    <rect x="6" y="6" width="34" height="26" rx="2" fill="#fffdfa"/>
+    <rect x="6" y="36" width="34" height="26" rx="2" fill="#fffdfa"/>
+    <circle cx="23" cy="49" r="4" fill="#c7addb"/>
+  </g>
+  <!-- teacup -->
+  <g transform="translate(30,60)">
+    <ellipse cx="20" cy="34" rx="20" ry="5" fill="#e9c6d8"/>
+    <path d="M2 15h36v14a18 18 0 0 1-36 0Z" fill="#fffdfa" stroke="#4a3247" stroke-width="2"/>
+    <path d="M38 20c8-2 8 12 0 12" fill="none" stroke="#4a3247" stroke-width="2"/>
+    <path d="M10 15c0-6 4-8 4-13M20 15c0-6 4-8 4-13" stroke="#bfe3d2" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <!-- washi tape roll -->
+  <g transform="translate(185,150)">
+    <circle cx="20" cy="20" r="20" fill="#f3d383"/>
+    <circle cx="20" cy="20" r="8" fill="#fbeaf2"/>
+  </g>
+  <!-- flexagon paper strip -->
+  <g transform="translate(150,190) rotate(6)">
+    <polygon points="0,0 20,0 30,17 20,34 0,34 -10,17" fill="#bfe3d2" stroke="#4a3247" stroke-width="1.6"/>
+  </g>
+  <!-- scattered stars -->
+  <path d="M40 40 L43 47 L50 47 L44 51 L46 58 L40 54 L34 58 L36 51 L30 47 L37 47 Z" fill="#dd5d94" opacity="0.8"/>
+  <path d="M215 90 L217 95 L222 95 L218 98 L220 103 L215 100 L210 103 L212 98 L208 95 L213 95 Z" fill="#9c78bf" opacity="0.8"/>
+</svg>

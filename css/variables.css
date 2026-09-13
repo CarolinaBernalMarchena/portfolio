@@ -1,0 +1,50 @@
+/* ============================================
+   TOKENS DE DISEÑO
+   Paleta pastel rosa/lila, inspirada en scrapbooks,
+   notas de papel y escritorios decorados.
+   ============================================ */
+
+:root {
+  /* --- Color: base --- */
+  --bg-paper: #fdf5f8;         /* fondo general, blanco rosado cálido */
+  --bg-paper-alt: #f6edf6;     /* fondo alterno, lila muy suave */
+  --bg-card: #fffdfa;          /* tarjetas / notas, blanco cálido */
+  --bg-desk: #f1dde7;          /* superficie del "escritorio" del hero */
+
+  /* --- Color: acentos --- */
+  --pink: #f2a9c6;
+  --pink-deep: #dd5d94;
+  --pink-ink: #8a3f63;
+  --lilac: #c7addb;
+  --lilac-deep: #9c78bf;
+  --cream: #fdeec0;
+  --cream-deep: #f3d383;
+  --mint: #bfe3d2;
+  --mint-deep: #7fbf9f;
+
+  /* --- Color: texto --- */
+  --ink: #4a3247;              /* casi-negro cálido, no negro puro */
+  --ink-soft: #866f83;
+  --ink-on-pink: #55203f;
+
+  /* --- Tipografía --- */
+  --font-hand: "Caveat", cursive;
+  --font-body: "Quicksand", sans-serif;
+
+  /* --- Espaciado --- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+
+  /* --- Bordes y sombras --- */
+  --radius-note: 4px;
+  --radius-card: 10px;
+  --shadow-note: 0 6px 14px rgba(138, 63, 99, 0.18);
+  --shadow-card: 0 10px 24px rgba(138, 63, 99, 0.12);
+  --shadow-lift: 0 16px 30px rgba(138, 63, 99, 0.22);
+
+  /* --- Layout --- */
+  --content-width: 920px;
+}

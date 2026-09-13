@@ -1,0 +1,62 @@
+/* ============================================
+   HABILIDADES
+   Grupos de "pegatinas" de tecnologías, como si
+   estuvieran pegadas en una libreta.
+   ============================================ */
+
+.skills {
+  background: var(--bg-paper);
+  padding: var(--space-xl) var(--space-md);
+}
+
+.skills__wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.skills__group {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: 1.4rem 1.4rem 1.6rem;
+  box-shadow: var(--shadow-card);
+}
+
+.skills__group:nth-child(2) { transform: rotate(0.6deg); }
+.skills__group:nth-child(3) { transform: rotate(-0.6deg); }
+
+.skills__group h3 {
+  font-size: 1.5rem;
+  color: var(--pink-deep);
+  margin-bottom: 0.8rem;
+}
+
+.skills__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  color: var(--ink-on-pink);
+  transform: rotate(-1.5deg);
+}
+
+.skills__chips .chip:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+
+.chip--pink   { background: var(--pink); }
+.chip--lilac  { background: var(--lilac); }
+.chip--mint   { background: var(--mint); }
+.chip--cream  { background: var(--cream); color: var(--ink); }
