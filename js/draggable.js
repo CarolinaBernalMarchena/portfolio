@@ -1,9 +1,12 @@
 /* ============================================
    draggable.js
-   Convierte las notas del escritorio en elementos
-   arrastrables (ratón y táctil). Si el usuario suelta
-   la nota sin haberla movido apenas, se interpreta
-   como un clic y se navega a la sección enlazada.
+   Convierte los elementos marcados con [data-draggable]
+   (notas de navegación Y objetos decorativos) en
+   elementos arrastrables (ratón y táctil).
+   Si el elemento tiene data-target y se suelta sin
+   apenas moverse, se interpreta como un clic y navega
+   a la sección enlazada. Los objetos decorativos no
+   llevan data-target, así que solo se arrastran.
    ============================================ */
 
 (function () {
@@ -20,7 +23,7 @@
     const board = note.closest(".desk__board");
 
     function onPointerDown(event) {
-      // En móvil las notas están en flujo normal (no absolutas); no arrastramos ahí.
+      // En móvil los elementos están en flujo normal (no absolutos); no arrastramos ahí.
       if (window.innerWidth <= 640) return;
 
       pointerId = event.pointerId;
@@ -80,9 +83,9 @@
     });
   }
 
-  function initDraggableNotes() {
-    document.querySelectorAll(".note").forEach(makeDraggable);
+  function initDraggableElements() {
+    document.querySelectorAll("[data-draggable]").forEach(makeDraggable);
   }
 
-  document.addEventListener("DOMContentLoaded", initDraggableNotes);
+  document.addEventListener("DOMContentLoaded", initDraggableElements);
 })();

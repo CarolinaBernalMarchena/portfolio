@@ -15,7 +15,10 @@
   <link rel="stylesheet" href="css/typography.css" />
   <link rel="stylesheet" href="css/tabs.css" />
   <link rel="stylesheet" href="css/desk.css" />
+  <link rel="stylesheet" href="css/toys.css" />
+  <link rel="stylesheet" href="css/cursor.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/book.css" />
   <link rel="stylesheet" href="css/projects.css" />
   <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/contact.css" />
@@ -51,40 +54,61 @@
     </div>
 
     <div class="desk__board">
-      <button type="button" class="note note--about" data-target="#about">
+      <button type="button" class="note note--about" data-draggable data-target="#about">
         <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
         <span class="note__label">sobre mí</span>
         <span class="note__sub">quién soy</span>
       </button>
 
-      <button type="button" class="note note--projects" data-target="#projects">
+      <button type="button" class="note note--projects" data-draggable data-target="#projects">
         <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
         <span class="note__label">proyectos</span>
         <span class="note__sub">lo que he hecho</span>
       </button>
 
-      <button type="button" class="note note--skills" data-target="#skills">
+      <button type="button" class="note note--skills" data-draggable data-target="#skills">
         <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
         <span class="note__label">habilidades</span>
         <span class="note__sub">con qué trabajo</span>
       </button>
 
-      <button type="button" class="note note--contact" data-target="#contact">
+      <button type="button" class="note note--contact" data-draggable data-target="#contact">
         <img class="note__pin" src="assets/svg/pin.svg" alt="" aria-hidden="true" />
         <span class="note__label">contacto</span>
         <span class="note__sub">hablemos</span>
       </button>
+
+      <!-- Objetos decorativos: solo para juguetear, sin función de navegación -->
+      <div class="toy toy--mug" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-mug.svg" alt="" draggable="false" />
+      </div>
+      <div class="toy toy--headphones" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-headphones.svg" alt="" draggable="false" />
+      </div>
+      <div class="toy toy--tape" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-tape.svg" alt="" draggable="false" />
+      </div>
+      <div class="toy toy--ds" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-ds.svg" alt="" draggable="false" />
+      </div>
+      <div class="toy toy--pencil" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-pencil.svg" alt="" draggable="false" />
+      </div>
+      <div class="toy toy--receipt" data-draggable aria-hidden="true">
+        <img src="assets/svg/toy-receipt.svg" alt="" draggable="false" />
+      </div>
     </div>
   </header>
 
   <!-- ============ SOBRE MÍ ============ -->
   <section class="about" id="about">
     <div class="about__wrap">
-      <div class="about__frame">
+      <button type="button" class="about__frame" data-book-trigger aria-haspopup="dialog">
         <span class="about__tape" aria-hidden="true"></span>
         <img src="assets/svg/about-desk.svg" alt="Ilustración de un escritorio con un portátil, una Nintendo DS, una taza de té y cinta washi" />
         <span class="about__caption">mi rincón de siempre</span>
-      </div>
+        <span class="about__frame-hint">toca para abrir mi libro ✦</span>
+      </button>
 
       <div class="about__body">
         <span class="eyebrow">sobre mí</span>
@@ -113,6 +137,10 @@
           <span class="about__tag">papercraft</span>
           <span class="about__tag">homebrew DS</span>
         </div>
+        <button type="button" class="about__book-link" data-book-trigger aria-haspopup="dialog">
+          curiosidades sobre mí, en formato libro
+          <img src="assets/svg/arrow-scribble.svg" alt="" aria-hidden="true" />
+        </button>
       </div>
     </div>
   </section>
@@ -302,8 +330,97 @@
     </div>
   </section>
 
+  <!-- ============ EL LIBRO ============ -->
+  <div class="book-overlay" id="book-overlay" hidden>
+    <div class="book" role="dialog" aria-modal="true" aria-labelledby="book-page-title">
+      <button type="button" class="book__close" data-book-close aria-label="Cerrar libro">✕</button>
+
+      <div class="book__spine" aria-hidden="true"></div>
+
+      <div class="book__pages">
+
+        <section class="book__page is-active" data-page="0">
+          <span class="eyebrow">página 1</span>
+          <h3 id="book-page-title">curiosidades</h3>
+          <ul class="book__facts">
+            <li>Mi TFG se llama <strong>TrinketBox</strong> 🎁 — una plataforma de coleccionables digitales gamificada.</li>
+            <li>Ahora mismo estoy aprendiendo a programar para <strong>Nintendo DS</strong> con devkitPro: mi juego va de decorar la jaula de un pájaro.</li>
+            <li>Los <strong>flexágonos</strong> de papel son mi debilidad número uno del papercraft.</li>
+            <li>Estudio en la <strong>Universidad de Sevilla</strong>, mención en Tecnologías de la Información.</li>
+          </ul>
+        </section>
+
+        <section class="book__page" data-page="1">
+          <span class="eyebrow">página 2</span>
+          <h3>mis aficiones, con calma</h3>
+          <p>
+            Cuando cierro el portátil, sigo con algo parecido: dibujo pixel art, casi
+            siempre cosas pequeñitas y con mucho detalle en pocos píxeles.
+          </p>
+          <p>
+            También hago papercraft — sobre todo flexágonos, esas tiras de papel que
+            se pliegan y esconden caras nuevas cada vez que las giras.
+          </p>
+          <p>
+            Y en un rincón muy random de mis ratos libres, voy montando un juego
+            homebrew para Nintendo DS con devkitPro / devkitARM, sobre decorar la
+            jaula de un pajarito virtual.
+          </p>
+        </section>
+
+        <section class="book__page" data-page="2">
+          <span class="eyebrow">página 3</span>
+          <h3>mini galería</h3>
+          <p class="section-intro">
+            Aquí quiero poner fotos de verdad — en cuanto las tenga, estos huecos
+            se convierten en imágenes.
+          </p>
+          <div class="book__gallery">
+            <figure class="book__gallery-item" data-photo-slot="pixel-art">
+              <div class="book__placeholder">
+                <img src="assets/svg/placeholder-photo.svg" alt="" aria-hidden="true" />
+              </div>
+              <figcaption>pixel art</figcaption>
+            </figure>
+            <figure class="book__gallery-item" data-photo-slot="papercraft">
+              <div class="book__placeholder">
+                <img src="assets/svg/placeholder-photo.svg" alt="" aria-hidden="true" />
+              </div>
+              <figcaption>papercraft</figcaption>
+            </figure>
+            <figure class="book__gallery-item" data-photo-slot="ds-game">
+              <div class="book__placeholder">
+                <img src="assets/svg/placeholder-photo.svg" alt="" aria-hidden="true" />
+              </div>
+              <figcaption>el juego de DS</figcaption>
+            </figure>
+            <figure class="book__gallery-item" data-photo-slot="desk">
+              <div class="book__placeholder">
+                <img src="assets/svg/placeholder-photo.svg" alt="" aria-hidden="true" />
+              </div>
+              <figcaption>mi escritorio real</figcaption>
+            </figure>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="book__nav">
+        <button type="button" class="book__arrow" data-book-prev aria-label="Página anterior">←</button>
+        <div class="book__dots" role="tablist" aria-label="Páginas del libro">
+          <button type="button" class="book__dot is-active" data-page-index="0" role="tab" aria-label="Ir a la página 1"></button>
+          <button type="button" class="book__dot" data-page-index="1" role="tab" aria-label="Ir a la página 2"></button>
+          <button type="button" class="book__dot" data-page-index="2" role="tab" aria-label="Ir a la página 3"></button>
+        </div>
+        <button type="button" class="book__arrow" data-book-next aria-label="Página siguiente">→</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/draggable.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/book.js"></script>
+  <script src="js/cursor.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

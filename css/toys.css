@@ -1,0 +1,51 @@
+/* ============================================
+   OBJETOS DECORATIVOS DEL ESCRITORIO
+   Elementos puramente decorativos, arrastrables,
+   sin función de navegación. Aportan la sensación
+   de "escritorio con cosas encima" de las referencias.
+   ============================================ */
+
+.toy {
+  position: absolute;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  z-index: 5;
+  transform: rotate(var(--rot, 0deg));
+  filter: drop-shadow(0 6px 10px rgba(138, 63, 99, 0.16));
+  transition: filter 0.15s ease, transform 0.12s ease;
+}
+
+.toy:hover {
+  filter: drop-shadow(0 10px 16px rgba(138, 63, 99, 0.24));
+}
+
+.toy:active {
+  transform: rotate(var(--rot, 0deg)) scale(0.94);
+}
+
+.toy.is-dragging {
+  cursor: grabbing;
+  z-index: 30;
+  transition: filter 0.15s ease;
+  filter: drop-shadow(0 14px 20px rgba(138, 63, 99, 0.3));
+}
+
+.toy img {
+  pointer-events: none;
+}
+
+.toy--mug        { width: 64px;  top: 66%; left: 46%; --rot: -4deg; }
+.toy--headphones { width: 76px;  top: 10%; left: 58%; --rot: 6deg; }
+.toy--tape       { width: 54px;  top: 62%; left: 66%; --rot: 0deg; }
+.toy--ds         { width: 48px;  top: 30%; left: 84%; --rot: -8deg; }
+.toy--pencil     { width: 88px;  top: 82%; left: 40%; --rot: -18deg; }
+.toy--receipt    { width: 42px;  top: 4%;  left: 84%; --rot: 8deg; }
+
+/* En pantallas donde las notas dejan de ser arrastrables,
+   los juguetes decorativos se ocultan para no saturar */
+@media (max-width: 640px) {
+  .toy {
+    display: none;
+  }
+}

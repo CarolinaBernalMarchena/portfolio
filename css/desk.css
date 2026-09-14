@@ -23,7 +23,10 @@
 .desk::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: radial-gradient(rgba(138, 63, 99, 0.06) 1px, transparent 1px);
   background-size: 22px 22px;
   pointer-events: none;
@@ -104,7 +107,11 @@
   box-shadow: var(--shadow-lift);
 }
 
-.note:active,
+.note:active {
+  box-shadow: var(--shadow-lift);
+  transform: rotate(var(--rot, 0deg)) scale(0.96);
+}
+
 .note.is-dragging {
   cursor: grabbing;
   box-shadow: var(--shadow-lift);
@@ -135,11 +142,13 @@
   margin-top: 0.35rem;
 }
 
-/* Colores individuales + rotación "pegada a mano" */
-.note--about   { background: var(--cream);  transform: rotate(-6deg); }
-.note--projects{ background: var(--pink);   transform: rotate(4deg); }
-.note--skills  { background: var(--mint);   transform: rotate(-3deg); }
-.note--contact { background: var(--lilac);  transform: rotate(6deg); }
+/* Colores individuales + rotación "pegada a mano".
+   La rotación vive en --rot para poder combinarla con
+   el scale() del efecto de pulsación sin pisarla. */
+.note--about   { background: var(--cream);  --rot: -6deg; transform: rotate(var(--rot)); }
+.note--projects{ background: var(--pink);   --rot: 4deg;  transform: rotate(var(--rot)); }
+.note--skills  { background: var(--mint);   --rot: -3deg; transform: rotate(var(--rot)); }
+.note--contact { background: var(--lilac);  --rot: 6deg;  transform: rotate(var(--rot)); }
 
 .note--about   .note__label,
 .note--skills  .note__label { color: var(--ink); }

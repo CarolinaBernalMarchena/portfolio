@@ -23,7 +23,10 @@
 .contact__card::before {
   content: "";
   position: absolute;
-  inset: 14px;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
   border: 2px dashed var(--pink);
   border-radius: 6px;
   pointer-events: none;
@@ -57,6 +60,10 @@
 .contact__button:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lift);
+}
+
+.contact__button:active {
+  transform: translateY(-1px) scale(0.96);
 }
 
 .contact__button svg {

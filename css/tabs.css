@@ -34,6 +34,10 @@
   transform: translateY(2px);
 }
 
+.tabs__link:active {
+  transform: translateY(2px) scale(0.94);
+}
+
 @media (max-width: 640px) {
   .tabs {
     gap: 0.25rem;
